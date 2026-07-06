@@ -1,21 +1,26 @@
 package it.unibo.platformer.model.physics.impl;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
+import it.unibo.platformer.model.physics.api.GameObject;
+
 /**
  * This class give the side of the collision.
  */
+@SuppressFBWarnings
 public final class CollisionResult {
-    private final GameObjectImpl dynamicObj;
-    private final GameObjectImpl staticObj;
+    private final GameObject dynamicObj;
+    private final GameObject staticObj;
     private final CollisionSide side;
 
     /**
      * the builder of the collision result.
-     * 
+     *
      * @param dynamicObj the first object
      * @param staticObj the second object
      * @param side the side of the collision
      */
-    public CollisionResult(final GameObjectImpl dynamicObj, final GameObjectImpl staticObj, final CollisionSide side) {
+    @SuppressFBWarnings
+    public CollisionResult(final GameObject dynamicObj, final GameObject staticObj, final CollisionSide side) {
         this.dynamicObj = dynamicObj;
         this.staticObj = staticObj;
         this.side = side;
@@ -24,14 +29,14 @@ public final class CollisionResult {
     /**
      * @return the GameObjectImpl
      */
-    public GameObjectImpl getDynamicObj() {
+    public GameObject getDynamicObj() {
         return this.dynamicObj;
     }
 
     /**
      * @return the static object
      */
-    public GameObjectImpl getStaticObj() {
+    public GameObject getStaticObj() {
         return this.staticObj;
     }
 

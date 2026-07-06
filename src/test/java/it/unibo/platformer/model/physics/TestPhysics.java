@@ -1,6 +1,9 @@
 package it.unibo.platformer.model.physics;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.Test;
 
@@ -93,7 +96,7 @@ class TestPhysics {
         final VectorImpl speed = new VectorImpl((int) VAL_10, (int) VAL_10);
         assertEquals(pos.getX(), o.getPosition().getX());
         assertEquals(pos.getY(), o.getPosition().getY());
-        assertFalse(o.isOnGround());;
+        assertFalse(o.isOnGround());
         o.setSpeed((int) VAL_10, (int) VAL_10);
         assertEquals(speed.getX(), o.getSpeed().getX());
         assertEquals(speed.getY(), o.getSpeed().getY());

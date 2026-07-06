@@ -1,13 +1,16 @@
 package it.unibo.platformer.model.entities;
 
 import it.unibo.platformer.model.physics.impl.GameObjectImpl;
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import it.unibo.platformer.model.physics.api.BasicPhysics;
+import it.unibo.platformer.model.physics.api.GameObject;
 
 /** Represents an entity capable of movement and subject to physical forces.*/
+@SuppressFBWarnings
 public abstract class AbstractDynamicEntity extends AbstractEntity {
 
     /** Stores position, size and velocity of this entity. */
-    private final GameObjectImpl gameObject;
+    private final GameObject gameObject;
 
     /** Applies gravity and movement to this entity. */
     private final BasicPhysics physics;
@@ -39,7 +42,7 @@ public abstract class AbstractDynamicEntity extends AbstractEntity {
 
     /** {@inheritDoc} */
     @Override
-    public double getX() { 
+    public double getX() {
         return gameObject.getPosition().getX();
     }
 
@@ -65,7 +68,7 @@ public abstract class AbstractDynamicEntity extends AbstractEntity {
     @Override
     public void setX(final double x) {
         gameObject.getPosition().setX((float) x);
-     }
+    }
 
     /** {@inheritDoc} */
     @Override
@@ -177,7 +180,7 @@ public abstract class AbstractDynamicEntity extends AbstractEntity {
     /**
      * @return the underlying {@link GameObjectImpl} used by the physics engine
      */
-    public GameObjectImpl getGameObject() {
+    public GameObject getGameObject() {
         return gameObject;
     }
 }
