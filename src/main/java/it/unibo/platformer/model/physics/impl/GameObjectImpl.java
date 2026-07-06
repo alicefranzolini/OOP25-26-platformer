@@ -6,8 +6,8 @@ import it.unibo.platformer.model.physics.api.GameObject;
  * This class implements GameObject.
  */
 public final class GameObjectImpl implements GameObject {
-    private VectorImpl position;
-    private VectorImpl speed;
+    private final VectorImpl position;
+    private final VectorImpl speed;
     private float width;
     private float height;
     private boolean onGround;

@@ -14,6 +14,7 @@ public final class VectorImpl implements Vector, Cloneable {
      * The empty costructor.
      */
     public VectorImpl() {
+        //Default constructor
     }
 
     /**
@@ -75,7 +76,7 @@ public final class VectorImpl implements Vector, Cloneable {
         try {
             return (VectorImpl) super.clone();
         } catch (final CloneNotSupportedException e) {
-            throw new AssertionError();
+            throw new AssertionError("Error in the vector", e);
         }
     }
 
