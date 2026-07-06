@@ -8,7 +8,7 @@ import java.io.IOException;
 public class NoSideException extends IOException {
     private static final long serialVersionUID = 1L;
     private static final String MSG = "No side found";
-    
+
     /**
      * The exception builder.
      */
