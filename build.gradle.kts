@@ -65,3 +65,12 @@ application {
     // Define the main class for the application
     mainClass.set(main)
 }
+
+tasks.shadowJar {
+    archiveClassifier.set("")
+    archiveBaseName.set("Platformer")
+}
+
+tasks.jar {
+    enabled = false
+}

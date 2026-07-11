@@ -65,16 +65,16 @@ public interface GameObject {
      */
     VectorImpl getSpeed();
 
-    /** 
+    /**
      * return if the object is on ground.
-     * 
-     * @return boolean 
+     *
+     * @return boolean
      */
     boolean isOnGround();
 
-    /** 
+    /**
      * set the object on ground.
-     * 
+     *
      * @param onGround if the object is on ground
      */
     void setOnGround(boolean onGround);
