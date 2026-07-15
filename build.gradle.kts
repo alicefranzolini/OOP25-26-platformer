@@ -66,11 +66,15 @@ application {
     mainClass.set(main)
 }
 
-tasks.shadowJar {
-    archiveClassifier.set("")
-    archiveBaseName.set("Platformer")
-}
-
 tasks.jar {
     enabled = false
 }
+
+tasks.shadowJar {
+    archiveClassifier.set("")
+    archiveBaseName.set("OOP25-platformer")
+}
+
+tasks.named("distZip") { enabled = false }
+tasks.named("distTar") { enabled = false }
+tasks.named("startScripts") { enabled = false }
