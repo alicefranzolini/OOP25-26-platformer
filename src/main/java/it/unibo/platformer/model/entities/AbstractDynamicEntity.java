@@ -109,6 +109,8 @@ public abstract class AbstractDynamicEntity extends AbstractEntity {
     }
 
     /**
+     * Gets the horizontal velocity of this entity.
+     *
      * @return the horizontal velocity of this entity
      */
     public double getVelocityX() {
@@ -116,6 +118,8 @@ public abstract class AbstractDynamicEntity extends AbstractEntity {
     }
 
     /**
+     * Gets the vertical velocity of this entity.
+     *
      * @return the vertical velocity of this entity
      */
     public double getVelocityY() {
@@ -123,6 +127,8 @@ public abstract class AbstractDynamicEntity extends AbstractEntity {
     }
 
     /**
+     * Sets the horizontal velocity of this entity.
+     *
      * @param vx the new horizontal velocity
      */
     public final void setVelocityX(final double vx) {
@@ -130,6 +136,8 @@ public abstract class AbstractDynamicEntity extends AbstractEntity {
     }
 
     /**
+     * Sets the vertical velocity of this entity.
+     *
      * @param vy the new vertical velocity
      */
     public final void setVelocityY(final double vy) {
@@ -137,6 +145,8 @@ public abstract class AbstractDynamicEntity extends AbstractEntity {
     }
 
     /**
+     * Checks whether this entity is affected by gravity.
+     *
      * @return true if this entity is subject to gravity
      */
     public boolean isAffectedByGravity() {
@@ -144,6 +154,8 @@ public abstract class AbstractDynamicEntity extends AbstractEntity {
     }
 
     /**
+     * Checks whether this entity is touching the ground.
+     *
      * @return true if this entity is currently on the ground
      */
     public boolean isOnGround() {
@@ -151,6 +163,8 @@ public abstract class AbstractDynamicEntity extends AbstractEntity {
     }
 
     /**
+     * Changes whether gravity affects this entity.
+     *
      * @param g true to enable gravity for this entity, false to disable it
      */
     public final void setAffectedByGravity(final boolean g) {
@@ -178,6 +192,8 @@ public abstract class AbstractDynamicEntity extends AbstractEntity {
     }
 
     /**
+     * Gets the object used by the physics engine.
+     *
      * @return the underlying {@link GameObjectImpl} used by the physics engine
      */
     public GameObject getGameObject() {

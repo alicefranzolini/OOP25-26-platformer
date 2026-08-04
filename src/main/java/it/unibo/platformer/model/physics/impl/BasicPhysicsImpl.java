@@ -10,6 +10,13 @@ public final class BasicPhysicsImpl implements BasicPhysics {
 
     private static final float GRAVITY = 800.0f;
 
+    /**
+     * Creates a basic physics implementation.
+     */
+    public BasicPhysicsImpl() {
+        super();
+    }
+
     @Override
     public void updatePosition(final GameObject o, final double deltaTime) {
         /*Update the speed*/

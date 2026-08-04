@@ -10,6 +10,13 @@ import it.unibo.platformer.model.physics.api.GameObject;
  */
 public final class CollisionDetectorImpl implements CollisionDetector {
 
+    /**
+     * Creates a collision detector.
+     */
+    public CollisionDetectorImpl() {
+        super();
+    }
+
     @Override
     public boolean collision(final GameObject a, final GameObject b) {
         final Rectangle r1 = new Rectangle((int) a.getPosition().getX(), (int) a.getPosition().getY(),

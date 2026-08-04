@@ -11,6 +11,13 @@ import it.unibo.platformer.model.physics.api.GameObject;
  */
 public final class CollisionResolverImpl implements CollisionResolver {
 
+    /**
+     * Creates a collision resolver.
+     */
+    public CollisionResolverImpl() {
+        super();
+    }
+
     @Override
     public void resolveAll(final List<CollisionResult> collisions) throws NoSideException {
         for (final CollisionResult res : collisions) {

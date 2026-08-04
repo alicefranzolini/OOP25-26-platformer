@@ -27,6 +27,8 @@ public final class CollisionResult {
     }
 
     /**
+     * Gets the dynamic object involved in the collision.
+     *
      * @return the GameObjectImpl
      */
     public GameObject getDynamicObj() {
@@ -34,6 +36,8 @@ public final class CollisionResult {
     }
 
     /**
+     * Gets the static object involved in the collision.
+     *
      * @return the static object
      */
     public GameObject getStaticObj() {
@@ -41,6 +45,8 @@ public final class CollisionResult {
     }
 
     /**
+     * Gets the side where the collision happened.
+     *
      * @return the side
      */
     public CollisionSide getSide() {

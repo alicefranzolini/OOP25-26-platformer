@@ -46,6 +46,8 @@ public abstract class AbstractEnemyImpl extends AbstractDynamicEntity implements
     protected abstract void loadAnimations();
 
     /**
+     * Gets the animation manager for this enemy.
+     *
      * @return the animation manager for this enemy
      */
     protected AnimationManager getAnim() {
@@ -53,6 +55,8 @@ public abstract class AbstractEnemyImpl extends AbstractDynamicEntity implements
     }
 
     /**
+     * Checks whether the sprite is facing left.
+     *
      * @return true if the sprite is currently facing left
      */
     public boolean isFacingLeft() {
@@ -60,6 +64,8 @@ public abstract class AbstractEnemyImpl extends AbstractDynamicEntity implements
     }
 
     /**
+     * Changes the direction of the sprite.
+     *
      * @param facingLeft true to face left, false to face right
      */
     public void setFacingLeft(final boolean facingLeft) {
@@ -146,6 +152,8 @@ public abstract class AbstractEnemyImpl extends AbstractDynamicEntity implements
         void render(AbstractEnemyImpl e, GraphicsContext gc);
 
         /**
+         * Checks whether this state can hurt the player.
+         *
          * @return true if the enemy in this state can hurt or kill the player
          */
         boolean hitsPlayer();

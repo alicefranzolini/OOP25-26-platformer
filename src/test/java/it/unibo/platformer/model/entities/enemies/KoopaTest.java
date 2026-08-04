@@ -269,7 +269,7 @@ class KoopaTest {
     static final class NoOpPhysics implements BasicPhysics {
 
         /**
-         * Does nothing – physics is not under test here.
+         * Does nothing - physics is not under test here.
          *
          * @param obj the object to update
          * @param dt the time elapsed since the last frame, in seconds

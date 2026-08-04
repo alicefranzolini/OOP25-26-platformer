@@ -150,7 +150,7 @@ class CoinTest {
     static final class NoOpPhysics implements BasicPhysics {
 
         /**
-         * Does nothing – physics is not under test here.
+         * Does nothing - physics is not under test here.
          */
         @Override
         public void updatePosition(final GameObject obj, final double dt) { }

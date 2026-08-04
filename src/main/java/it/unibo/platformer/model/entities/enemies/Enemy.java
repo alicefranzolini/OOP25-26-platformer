@@ -23,36 +23,50 @@ public interface Enemy {
     void render(GraphicsContext gc);
 
     /**
+     * Checks whether this enemy can hurt the player.
+     *
      * @return true if this enemy can currently hurt or kill the player
      */
     boolean hitsPlayer();
 
     /**
+     * Checks whether this enemy is walking.
+     *
      * @return true if this enemy is currently moving
      */
     boolean isWalking();
 
     /**
+     * Checks whether this enemy is still active.
+     *
      * @return true if this enemy is currently active in the game world
      */
     boolean isActive();
 
     /**
+     * Gets the horizontal position of this enemy.
+     *
      * @return the horizontal position of this enemy
      */
     double getX();
 
     /**
+     * Gets the vertical position of this enemy.
+     *
      * @return the vertical position of this enemy
      */
     double getY();
 
     /**
+     * Gets the width of this enemy.
+     *
      * @return the width of this enemy
      */
     double getWidth();
 
     /**
+     * Gets the height of this enemy.
+     *
      * @return the height of this enemy
      */
     double getHeight();

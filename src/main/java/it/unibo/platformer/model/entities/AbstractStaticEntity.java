@@ -38,6 +38,8 @@ public abstract class AbstractStaticEntity extends AbstractEntity {
     }
 
     /**
+     * Checks whether this entity blocks movement.
+     *
      * @return true if this entity blocks movement
      */
     public boolean isSolid() {
@@ -45,6 +47,8 @@ public abstract class AbstractStaticEntity extends AbstractEntity {
     }
 
     /**
+     * Changes whether this entity blocks movement.
+     *
      * @param solid true to make this entity block movement, false to allow passing through
      */
     public void setSolid(final boolean solid) {

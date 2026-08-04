@@ -42,7 +42,7 @@ public final class Koopa extends AbstractEnemyImpl {
         final Image walk2 = AnimationManager.loadImage("/sprites/enemies/koopa2.png");
         final Image shell = AnimationManager.loadImage("/sprites/enemies/koopa_shell.png");
 
-       if (walk1 != null && walk2 != null) {
+        if (walk1 != null && walk2 != null) {
             getAnim().register(WALK_ANIMATION,
                     new Animation(new Image[]{walk1, walk2}, WALK_FRAME_DURATION, true));
         }
@@ -67,12 +67,12 @@ public final class Koopa extends AbstractEnemyImpl {
      * Stomps on the Koopa, transitioning it into a stationary shell.
      */
     public void stomp() {
-        // Se vuoi evitare di pestarlo se è già un guscio in movimento (o fermo)
+        // A Koopa can only be stomped while it is walking.
         if (this.state != KoopaState.WALK) {
             return;
         }
         transitionTo(KoopaState.SHELL);
-        setVelocityX(0); // Ferma il movimento orizzontale
+        setVelocityX(0);
     }
 
     /**
@@ -82,8 +82,8 @@ public final class Koopa extends AbstractEnemyImpl {
      */
     public void kick(final boolean toRight) {
         transitionTo(KoopaState.SHELL_MOVING);
-        // Moltiplichiamo la velocità di camminata per farlo andare veloce come guscio
-        final double shellSpeed = WALK_SPEED * 3.0; 
+        // The shell moves faster than the walking Koopa.
+        final double shellSpeed = WALK_SPEED * 3.0;
         setVelocityX(toRight ? shellSpeed : -shellSpeed);
     }
 
