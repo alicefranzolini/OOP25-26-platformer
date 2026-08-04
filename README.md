@@ -11,7 +11,7 @@ The player controls a character who must make their way through 3 levels, jumpin
 From a terminal, navigate to the folder containing the file and run:
 
 ```bash
-java -jar OOP25-platformer-all.jar
+java -jar OOP25-platformer.jar
 ```
 
 ## Controls
